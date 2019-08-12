@@ -128,17 +128,6 @@ rabbitmq-repo:
     - watch_in:
        - cmd: apt-get-update
 
-git-repo:
-  pkgrepo.managed:
-    - humanname: Official Git Ubuntu Repository
-    - name: deb http://ppa.launchpad.net/git-core/ppa/ubuntu lucid main
-    - file: /etc/apt/sources.list.d/git.list
-    - keyid: E1DF1F24
-    - keyserver: keyserver.ubuntu.com
-    - refresh_db: False
-    - watch_in:
-       - cmd: apt-get-update
-
 mysql-server-repo:
   pkgrepo.managed:
     - humanname: Official MySQL server repository
