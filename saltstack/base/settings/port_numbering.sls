@@ -15,18 +15,21 @@ environment:
     port: '0'
 
 store:
-  WF:
+  SO:
     locale: de_CH
     appdomain: '00'
+  WF:
+    locale: de_CH
+    appdomain: '01'
   EL:
     locale: fr_CH
-    appdomain: '01'
+    appdomain: '02'
   EP:
     locale: fr_CH
-    appdomain: '02'
+    appdomain: '03'
   DY:
     locale: fr_CH
-    appdomain: '03'
+    appdomain: '04'
   FA:
     locale: it_CH
-    appdomain: '04'
+    appdomain: '05'

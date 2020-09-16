@@ -31,6 +31,7 @@ autoupdate:
 # each environment section (see below).
 # Mandatory, default: no value
 stores:
+  - SO
   - WF
   - EL
   - EP
@@ -100,6 +101,14 @@ environments:
 
     stores:
       # List of stores and store-specific settings. Stores listed here has to be the same as configured above in "stores" key.
+      SO:
+        yves:
+          hostnames:
+            - '~^www\.so\..+\.local$'
+        zed:
+          hostname: '~^zed\.so\..+\.local$'
+        glue:
+          hostname: '~^glue\.so\..+\.local$'
       WF:
         yves:
           hostnames:
@@ -162,6 +171,14 @@ environments:
       enable_local_vhost: true
       hostname: '~^static-test\..+\.local$'
     stores:
+      SO:
+        yves:
+          hostnames:
+            - '~^www-test\.so\..+\.local$'
+        zed:
+          hostname: '~^zed-test\.so\..+\.local$'
+        glue:
+          hostname: '~^glue-test\.so\..+\.local$'
       WF:
         yves:
           hostnames:
