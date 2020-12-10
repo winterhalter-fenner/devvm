@@ -60,26 +60,10 @@
     - mode: 644
     - context:
       environment: {{ environment }}
-      settings: {{ settings }}
-      store: {{ store }}
-      spryker_store: {{ spryker_store }}
-      is_alternative_store: {{is_alternative_store}}
-    - require:
-      - file: /data/logs/{{ environment }}
-    - watch_in:
-      - cmd: reload-nginx
-
-/etc/nginx/sites-available/{{ store }}_{{ environment }}_glue:
-  file.managed:
-    - source: salt://spryker/files/etc/nginx/sites-available/XX-glue.conf
-    - template: jinja
-    - user: root
-    - group: root
-    - mode: 644
-    - context:
-      environment: {{ environment }}
       store: {{ store }}
       settings: {{ settings|tojson }}
+      spryker_store: {{ spryker_store }}
+      is_alternative_store: {{is_alternative_store}}
     - require:
       - file: /data/logs/{{ environment }}
     - watch_in:

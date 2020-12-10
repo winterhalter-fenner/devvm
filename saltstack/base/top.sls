@@ -25,7 +25,6 @@ dev:
     - java
     - development
     - mailcatcher
-    - elk
     - nginx
     - pound
     - jenkins
@@ -35,7 +34,6 @@ dev:
     - elasticsearch
     - serverspec
     - spryker
-    - prestissimo
 
 # Production-like setup - we apply specific states to machines, based on roles
 # the definitions above are just examples how to setup role-based environments.
@@ -47,7 +45,6 @@ qa:
     - hosting
     - user
     - postfix
-    - newrelic
     - ruby
 
   # php and application code
@@ -61,7 +58,6 @@ qa:
   'roles:web':
     - match: grain
     - nginx
-    - newrelic.php
     - nodejs
 
   # jenkins to run cronjob and indexers
@@ -70,7 +66,6 @@ qa:
     - spryker
     - java
     - jenkins
-    - newrelic.php
 
   # elasticsearch (for spryker data)
   'roles:elasticsearch':

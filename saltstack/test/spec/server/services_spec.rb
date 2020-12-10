@@ -8,7 +8,7 @@ services = [
   #'docker', # Temporarly disabled until docker containerd does not cause issues
   # App services
   'postgresql',
-  'rabbitmq-server',
+  'mysql',
   'redis-server-development',
   'elasticsearch-development',
 ]

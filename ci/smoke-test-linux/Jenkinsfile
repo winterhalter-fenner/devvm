@@ -176,7 +176,7 @@ pipeline {
 
                         vagrant ssh -c 'cd /data/shop/development/current; patch -p0 < /vagrant/ci/smoke-test-linux/benchmark.patch && bash bin/benchmark || true'
 
-
+        
                     """
                 }
             }

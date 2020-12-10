@@ -19,9 +19,6 @@ autoupdate:
   php: true
 
   # Optional, default: False
-  mysql: false
-
-  # Optional, default: False
   postgresql: true
 
   # Optional, default: False
@@ -51,12 +48,6 @@ php:
 
   # Major PHP version
   major_version: 7.4
-
-# Newrelic credentials - leave empty for non-production setups
-newrelic:
-  license_key:
-  api_key:
-  appname:
 
 # Configuration of environments
 # It can consist of any subset of {development,testing,staging,production}

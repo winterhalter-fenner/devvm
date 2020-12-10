@@ -1,53 +1,36 @@
-# Akona fork of the spryker DevVM
+# Spryker OS - Reference repository for DevVM
 
 This repository contains the Vagrantfile for setting up initial state of the DevVM. Provisioning of the machine is done using SaltStack.
 
-Please refer to our [Confluence Installation guide](https://winterhalter-fenner.atlassian.net/wiki/spaces/WF/pages/98533438/Getting+started).
+To install Spryker, refer to [Installation guide - B2C](https://documentation.spryker.com/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm) or [Installation guide - B2B](https://documentation.spryker.com/docs/en/installation-guide-b2b).
+
+This repository contains:
+ - [saltstack](saltstack) - SaltStack implementation for provisioning reference infrastructure for development
+ - [pillar](pillar) - Pillar configuration values used by SaltStack
+ - Vagrantfile(s) used by Vagrant for managing local VirtualBox VMs
 
 ## Requirements
  - VirtualBox >= 5.2.x
- - Vagrant >= 2.2.0
  - Vagrant >= 2.2.3
  - `vagrant-hostmanager` plugin
 
 ## VM Settings
-Project `akona` and IP `10.10.0.159`.
-The following hostnames will be generated:
+The VM starts with the default configuration for project `demoshop` and IP `10.10.0.33`.
+To change project name, edit `Vagrantfile` and change the value of
+the `VM_PROJECT` (ie. to demoshop, project) and `VM_IP`(digits only) variables. The IP address must
+be unique, so each VM on your workstation has a unique IP address.
+
+Adjust the `VM_DOMAIN` variable value according to your config_default-development hostnames. 
+The default value is taken from the `VM_PROJECT` variable. For example, the following hostnames 
+are generated for the default value `VM_PROJECT=demoshop`:
 
 ```
-akona-vagrant
-www.wf.akona.local
-zed.wf.akona.local
-glue.wf.akona.local
-www.el.akona.local
-zed.el.akona.local
-glue.el.akona.local
-www.ep.akona.local
-zed.ep.akona.local
-glue.ep.akona.local
-www.dy.akona.local
-zed.dy.akona.local
-glue.dy.akona.local
-www.fa.akona.local
-zed.fa.akona.local
-glue.fa.akona.local
-static.akona.local
-www-test.wf.akona.local
-zed-test.wf.akona.local
-glue-test.wf.akona.local
-www-test.el.akona.local
-zed-test.el.akona.local
-glue-test.el.akona.local
-www-test.ep.akona.local
-zed-test.ep.akona.local
-glue-test.ep.akona.local
-www-test.dy.akona.local
-zed-test.dy.akona.local
-glue-test.dy.akona.local
-www-test.fa.akona.local
-zed-test.fa.akona.local
-glue-test.fa.akona.local
-static-test.akona.local
+www.de.demoshop.local
+zed.de.demoshop.local
+static.demoshop.local
+www-test.de.demoshop.local
+zed-test.de.demoshop.local
+static-test.demoshop.local
 ```
 
 ## Note on PHP OPcache
