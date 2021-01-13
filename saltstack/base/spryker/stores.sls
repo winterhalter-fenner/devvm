@@ -5,10 +5,6 @@
 {%- for store in pillar.stores %}
 {%- set is_alternative_store = 0 %}
 {%- set spryker_store = store %}
-{%- if store == 'EL' %}
-    {%- set spryker_store = 'WF' %}
-    {%- set is_alternative_store = 1 %}
-{%- endif %}
 
 # Generate application store config - config_local_XX.php
 /data/shop/{{ environment }}/shared/config_local_{{ store }}.php:

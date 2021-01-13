@@ -28,11 +28,6 @@ autoupdate:
 # each environment section (see below).
 # Mandatory, default: no value
 stores:
-  - WF
-  - EL
-  - EP
-  - DY
-  - FA
   - SO
 
 php:
@@ -92,46 +87,6 @@ environments:
 
     stores:
       # List of stores and store-specific settings. Stores listed here has to be the same as configured above in "stores" key.
-      WF:
-        yves:
-          hostnames:
-            - '~^www\.wf\..+\.local$'
-        zed:
-          hostname: '~^zed\.wf\..+\.local$'
-        glue:
-          hostname: '~^glue\.wf\..+\.local$'
-      EL:
-        yves:
-          hostnames:
-            - '~^www\.el\..+\.local$'
-        zed:
-          hostname: '~^zed\.el\..+\.local$'
-        glue:
-          hostname: '~^glue\.el\..+\.local$'
-      EP:
-        yves:
-          hostnames:
-            - '~^www\.ep\..+\.local$'
-        zed:
-          hostname: '~^zed\.ep\..+\.local$'
-        glue:
-          hostname: '~^glue\.ep\..+\.local$'
-      DY:
-        yves:
-          hostnames:
-            - '~^www\.dy\..+\.local$'
-        zed:
-          hostname: '~^zed\.dy\..+\.local$'
-        glue:
-          hostname: '~^glue\.dy\..+\.local$'
-      FA:
-        yves:
-          hostnames:
-            - '~^www\.fa\..+\.local$'
-        zed:
-          hostname: '~^zed\.fa\..+\.local$'
-        glue:
-          hostname: '~^glue\.fa\..+\.local$'
       SO:
         yves:
           hostnames:
@@ -161,46 +116,6 @@ environments:
       enable_local_vhost: true
       hostname: '~^static-test\..+\.local$'
     stores:
-      WF:
-        yves:
-          hostnames:
-            - '~^www-test\.wf\..+\.local$'
-        zed:
-          hostname: '~^zed-test\.wf\..+\.local$'
-        glue:
-          hostname: '~^glue-test\.wf\..+\.local$'
-      EL:
-        yves:
-          hostnames:
-            - '~^www-test\.el\..+\.local$'
-        zed:
-          hostname: '~^zed-test\.el\..+\.local$'
-        glue:
-          hostname: '~^glue-test\.el\..+\.local$'
-      EP:
-        yves:
-          hostnames:
-            - '~^www-test\.ep\..+\.local$'
-        zed:
-          hostname: '~^zed-test\.ep\..+\.local$'
-        glue:
-          hostname: '~^glue-test\.ep\..+\.local$'
-      DY:
-        yves:
-          hostnames:
-            - '~^www-test\.dy\..+\.local$'
-        zed:
-          hostname: '~^zed-test\.dy\..+\.local$'
-        glue:
-          hostname: '~^glue-test\.dy\..+\.local$'
-      FA:
-        yves:
-          hostnames:
-            - '~^www-test\.fa\..+\.local$'
-        zed:
-          hostname: '~^zed-test\.fa\..+\.local$'
-        glue:
-          hostname: '~^glue-test\.fa\..+\.local$'
       SO:
         yves:
           hostnames:
