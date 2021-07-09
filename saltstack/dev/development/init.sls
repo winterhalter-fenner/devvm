@@ -17,7 +17,7 @@ get-github-ssh-hostkey:
 # Install / Configure Oh-My-Zsh for user vagrant
 clone-oh-my-zsh:
   cmd.run:
-    - name: git clone https://github.com/robbyrussell/oh-my-zsh.git /home/vagrant/.oh-my-zsh
+    - name: git clone git://github.com/robbyrussell/oh-my-zsh.git /home/vagrant/.oh-my-zsh
     - unless: test -d /home/vagrant/.oh-my-zsh
     - runas: vagrant
 
@@ -53,14 +53,6 @@ clone-oh-my-zsh:
     - group: vagrant
     - template: jinja
     - file_mode: 755
-    - dir_mode: 755
-
-/home/vagrant/es6:
-  file.recurse:
-    - source: salt://development/files/home/vagrant/es6
-    - user: vagrant
-    - group: vagrant
-    - file_mode: 644
     - dir_mode: 755
 
 /home/vagrant/.oh-my-zsh/custom/plugins/spryker:

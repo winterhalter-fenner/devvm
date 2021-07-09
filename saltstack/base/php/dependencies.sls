@@ -1,7 +1,4 @@
 #
-# Dependency packages for php extenstions
+# Dependency packages for php extensions
 #
-php-extension-dependencies:
-  pkg.installed:
-    - pkgs:
-      - pkg-config
+
